@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMusic</title>
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <h2>TMusic</h2>
+      </div>
+      <div class="hyper-link">
+        <ul class="hyper-link-list">
+          <li class="hyper-link-item">
+            <i class="fa-regular fa-circle-down"></i
+            ><span>Cài đặt ứng dụng</span>
+          </li>
+          <li class="hyper-link-item"><i class="fa-regular fa-bell"></i></li>
+          <li class="hyper-link-item"><i class="fa-solid fa-user"></i></li>
+        </ul>
+      </div>
+      <div class="setting">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      <!-- Menu User -->
+      <div class="user-menu hidden">
+        <ul class="user-menu-list">
+          <li class="user-menu-item">
+            Tài khoản<i class="fa-solid fa-up-right-from-square"></i>
+          </li>
+          <li class="user-menu-item">Hồ sơ</li>
+          <li class="user-menu-item">
+            Hỗ trợ<i class="fa-solid fa-up-right-from-square"></i>
+          </li>
+          <li class="user-menu-item">
+            Tải xuống<i class="fa-solid fa-up-right-from-square"></i>
+          </li>
+          <li class="user-menu-item">Cài đặt</li>
+          <li></li>
+          <li class="user-menu-item">Đăng xuất</li>
+        </ul>
+      </div>
+    </header>
+
+
+    <!-- Siderbar -->
+    <aside class="">
+      <div class="home-search">
+        <span id="home" data-title="Trang chủ"
+          ><i class="fa-solid fa-house text-ative"></i
+          ><span class="home-search-content text-ative">Trang chủ</span></span
+        >
+        <span id="search" data-title="Tìm kiếm"
+          ><i class="fa-solid fa-magnifying-glass"></i
+          ><span class="home-search-content">Tìm kiếm</span></span
+        >
+      </div>
+      <div class="library">
+        <div class="library-item">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Thư viện</span>
+        </div>
+        <div class="library-item">
+          <i class="fa-solid fa-plus"></i>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+      <div class="library-filter">
+        <span>Danh sách phát </span>
+        <span>Nghệ sĩ</span>
+        <span>Album</span>
+      </div>
+      <div class="library-playlist">
+        <div class="library-search">
+          <span class="library-search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <span class="library-search-choose">
+            <span>Gần đây</span>
+            <i class="fa-solid fa-list-ul"></i>
+          </span>
+        </div>
+        <!--  -->
+        <div class="library-playlist-item" style="--i: 1">
+          <div class="library-playlist-img">
+            <img src="assets/img/album99.jfif" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>99%</p>
+            <p>Album • RPT MCK</p>
+          </div>
+        </div>
+        <div class="library-playlist-item" style="--i: 2">
+          <div class="library-playlist-img">
+            <img src="assets/img/album HT2.jfif" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>Khong The Say</p>
+            <p>Album • Hieu Thu Hai</p>
+          </div>
+        </div>
+        <div class="library-playlist-item" style="--i: 3">
+          <div class="library-playlist-img">
+            <img src="assets/img/link.jfif" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>LINK</p>
+            <p>Album • Hoang Thuy Linh</p>
+          </div>
+        </div>
+        <div class="library-playlist-item" style="--i: 4">
+          <div class="library-playlist-img">
+            <img src="assets/img/phao.webp" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>Phao</p>
+            <p>Nghệ sĩ</p>
+          </div>
+        </div>
+        <div class="library-playlist-item" style="--i: 5">
+          <div class="library-playlist-img">
+            <img src="assets/img/mono.jfif" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>Mono</p>
+            <p>Nghệ sĩ</p>
+          </div>
+        </div>
+        <div class="library-playlist-item" style="--i: 6">
+          <div class="library-playlist-img">
+            <img src="assets/img/son tung.jfif" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>Sơn Tùng MTP</p>
+            <p>Nghệ sĩ</p>
+          </div>
+        </div>
+        <div class="library-playlist-item" style="--i: 7">
+          <div class="library-playlist-img">
+            <img src="assets/img/moi ra lo.jfif" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>Mới Ra Lò</p>
+            <p>Danh Sách Phát • 30 bài hát</p>
+          </div>
+        </div>
+        <div class="library-playlist-item" style="--i: 8">
+          <div class="library-playlist-img">
+            <img src="assets/img/love.png" alt="" />
+          </div>
+          <div class="library-playlist-title">
+            <p>Bài hát đã thích</p>
+            <p>Danh Sách Phát • 75 bài hát</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="player-control">
+      <div class="song-playing">
+        <div class="song-playing-item">
+          <div class="song-playing-img">
+            <img src="/assets/music/img-songs/neulucdo.jpg" alt="" />
+          </div>
+          <div class="song-playing-title">
+            <p class="song-playing-title-namesong">Nếu lúc đó</p>
+            <p class="song-playing-title-namesinger">
+              <span class="name-singer">Tlinh • 2pillz</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="song-control">
+        <ul class="song-control-list">
+          <li class="song-control-item"><i class="fa-solid fa-shuffle"></i></li>
+          <li class="song-control-item">
+            <i class="fa-solid fa-backward-step"></i>
+          </li>
+          <li class="song-control-item"><i class="fa-solid fa-play"></i></li>
+
+          <!-- <li class="song-control-item"><i class="fa-solid fa-pause"></i></li> -->
+
+          <audio id="audio-player" src=""></audio>
+
+          <li class="song-control-item">
+            <i class="fa-solid fa-forward-step"></i>
+          </li>
+          <li class="song-control-item"><i class="fa-solid fa-repeat"></i></li>
+        </ul>
+
+        <div class="range">
+          <div id="music-duration">00:00</div>
+          <input
+            type="range"
+            class="range-item"
+            id="music-range"
+            value="0"
+            step="1"
+            min="1"
+            max="100"
+          />
+          <div id="music-duration-end">00:00</div>
+        </div>
+      </div>
+      <div class="song-option">
+        <ul class="song-option-list">
+          <li class="song-option-item"><i class="fa-solid fa-share"></i></li>
+          <li class="song-option-item">
+            <i class="fa-regular fa-face-grin-squint"></i>
+          </li>
+          <li class="song-option-item">
+            <i class="fa-solid fa-mobile-screen"></i>
+          </li>
+          <li class="song-option-item">
+            <i class="fa-solid fa-volume-high"></i>
+          </li>
+          <li class="song-option-item">
+            <input
+              type="range"
+              class="range-item"
+              name="volume"
+              id="volume"
+              max="100"
+              min="0"
+              value="50"
+            />
+          </li>
+          <li class="song-option-item">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Recommend -->
+    <div class="container">
+        <!-- Đề Xuất -->
+        <main id="home">
+            <div class="main-title">
+                <p id="multiText">Welcome to TMusic</p>
+            </div>
+            <div class="main-list">
+                <div class="main-item">
+                    <img src="assets/img/hot hit vn.jfif" alt="">
+                    <span>Hot Hits Vietnam</span>
+                    <div class="play-button" style="--positionY:-50%; --positionX:10px">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <img src="assets/img/thien ha nghe gi.jfif" alt="">
+                    <span>Thiên Hạ Nghe Gì</span>
+                    <div class="play-button" style="--positionY:-50%; --positionX:10px">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <img src="assets/img/equal VN.jfif" alt="">
+                    <span>Equal Vietnam</span>
+                    <div class="play-button" style="--positionY:-50%; --positionX:10px">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <img src="assets/img/mega hit mix.jfif" alt="">
+                    <span>Mega Hit Mix</span>
+                    <div class="play-button" style="--positionY:-50%; --positionX:10px">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <img src="assets/img/tieng hat at tieng ca.jfif" alt="">
+                    <span>Tiếng Hát Át Tiếng Ca</span>
+                    <div class="play-button" style="--positionY:-50%; --positionX:10px">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+                <div class="main-item">
+                    <img src="assets/img/viralHits.jfif" alt="">
+                    <span>Viral Hits</span>
+                    <div class="play-button" style="--positionY:-50%; --positionX:10px">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- For You -->
+            <div class="feed">
+              <div class="for-you">
+                <div class="for-you-title title-general">
+                    <h2 class="hover-underline">Dành cho bạn</h2>
+                    <a class="hover-underline">Hiện tất cả</a>
+                </div>
+                <div class="for-you-list">
+                    <div class="for-you-item" style="--i:1">
+                        <img src="assets/img/daily mix 1.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 1</p>
+                            <p class="for-you-item-title-sub">Hoàng Thùy Linh, Thịnh Suy, Đức Phúc và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:2">
+                        <img src="assets/img/daily mix 2.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 2</p>
+                            <p class="for-you-item-title-sub">RAP VIỆT, RPT MCK, Wxrdie và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:3">
+                        <img src="assets/img/daily mix 3.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 3</p>
+                            <p class="for-you-item-title-sub">BlankCh3ck, Low G, B Ray và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:4">
+                        <img src="assets/img/daily mix 4.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 4</p>
+                            <p class="for-you-item-title-sub">Charlie Puth, One Direction, The Walters và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:5">
+                        <img src="assets/img/daily mix 5.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 5</p>
+                            <p class="for-you-item-title-sub">Doja Cat, Lady Gaga, Bruno Mars và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="for-you">
+                <div class="for-you-title title-general">
+                    <h2 class="hover-underline">Dành cho bạn</h2>
+                    <a class="hover-underline">Hiện tất cả</a>
+                </div>
+                <div class="for-you-list">
+                    <div class="for-you-item" style="--i:1">
+                        <img src="assets/img/daily mix 1.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 1</p>
+                            <p class="for-you-item-title-sub">Hoàng Thùy Linh, Thịnh Suy, Đức Phúc và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:2">
+                        <img src="assets/img/daily mix 2.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 2</p>
+                            <p class="for-you-item-title-sub">RAP VIỆT, RPT MCK, Wxrdie và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:3">
+                        <img src="assets/img/daily mix 3.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 3</p>
+                            <p class="for-you-item-title-sub">BlankCh3ck, Low G, B Ray và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:4">
+                        <img src="assets/img/daily mix 4.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 4</p>
+                            <p class="for-you-item-title-sub">Charlie Puth, One Direction, The Walters và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:5">
+                        <img src="assets/img/daily mix 5.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 5</p>
+                            <p class="for-you-item-title-sub">Doja Cat, Lady Gaga, Bruno Mars và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="for-you">
+                <div class="for-you-title title-general">
+                    <h2 class="hover-underline">Dành cho bạn</h2>
+                    <a class="hover-underline">Hiện tất cả</a>
+                </div>
+                <div class="for-you-list">
+                    <div class="for-you-item" style="--i:1">
+                        <img src="assets/img/daily mix 1.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 1</p>
+                            <p class="for-you-item-title-sub">Hoàng Thùy Linh, Thịnh Suy, Đức Phúc và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:2">
+                        <img src="assets/img/daily mix 2.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 2</p>
+                            <p class="for-you-item-title-sub">RAP VIỆT, RPT MCK, Wxrdie và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:3">
+                        <img src="assets/img/daily mix 3.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 3</p>
+                            <p class="for-you-item-title-sub">BlankCh3ck, Low G, B Ray và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:4">
+                        <img src="assets/img/daily mix 4.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 4</p>
+                            <p class="for-you-item-title-sub">Charlie Puth, One Direction, The Walters và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:5">
+                        <img src="assets/img/daily mix 5.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 5</p>
+                            <p class="for-you-item-title-sub">Doja Cat, Lady Gaga, Bruno Mars và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="for-you">
+                <div class="for-you-title title-general">
+                    <h2 class="hover-underline">Dành cho bạn</h2>
+                    <a class="hover-underline">Hiện tất cả</a>
+                </div>
+                <div class="for-you-list">
+                    <div class="for-you-item" style="--i:1">
+                        <img src="assets/img/daily mix 1.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 1</p>
+                            <p class="for-you-item-title-sub">Hoàng Thùy Linh, Thịnh Suy, Đức Phúc và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:2">
+                        <img src="assets/img/daily mix 2.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 2</p>
+                            <p class="for-you-item-title-sub">RAP VIỆT, RPT MCK, Wxrdie và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:3">
+                        <img src="assets/img/daily mix 3.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 3</p>
+                            <p class="for-you-item-title-sub">BlankCh3ck, Low G, B Ray và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:4">
+                        <img src="assets/img/daily mix 4.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 4</p>
+                            <p class="for-you-item-title-sub">Charlie Puth, One Direction, The Walters và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="for-you-item" style="--i:5">
+                        <img src="assets/img/daily mix 5.jfif" alt="">
+                        <div class="for-you-item-title">
+                            <p class="for-you-item-title-main">Daily Mix 5</p>
+                            <p class="for-you-item-title-sub">Doja Cat, Lady Gaga, Bruno Mars và nhiều hơn nữa</p>
+                        </div>
+                        <div class="play-button" style="--positionX: 20px; --positonY: 50%">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+
+
+
+
+            
+
+            
+            
+        </main>
+      </div>
+    </div>
+  
+
+
+    <script
+    src="https://kit.fontawesome.com/ef0d708eb7.js"
+    crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>
