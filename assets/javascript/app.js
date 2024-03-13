@@ -84,12 +84,19 @@ function show(text) {
   }).showToast();
 }
 
-function load() {
-  const songs = new XMLHttpRequest();
-  songs.onload = () => {
-    console.table(songs);
-  };
+/********
+ * Testing
+ */
 
-  songs.open("GET", "./assets/javascript/songs.json");
+function load() {
+  let songs = new XMLHttpRequest();
+  
+  songs.onload = function() {
+    // console.log(songs.responseText);
+  }
+  songs.open("GET", "./assets/json/songs.json");
   songs.send();
 }
+console.log(songs[6].path);
+
+load();
