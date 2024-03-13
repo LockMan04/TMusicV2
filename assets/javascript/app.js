@@ -92,7 +92,8 @@ function show(text) {
   }).showToast();
 }
 
-
+getSongJson();
 window.onload = () => { 
   document.querySelector(".load-container").style.display = "none";
+  app.start();
 };

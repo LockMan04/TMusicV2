@@ -166,8 +166,3 @@ const app = {
   },
 };
 
-getSongJson();
-document.onload = () => {
-  app.start();
-}
-
