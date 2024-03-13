@@ -1,4 +1,4 @@
-#TMuic
+# TMuic
 
 Music is a spotify-based website template with some basic music streaming functionality
 
