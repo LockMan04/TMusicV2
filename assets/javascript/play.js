@@ -8,31 +8,33 @@ const playBtn = $(".fa-play");
 const nextBtn = $(".fa-forward-step");
 const prevBtn = $(".fa-backward-step");
 const repeatBtn = $(".fa-repeat");
+const shuffleBtn = $(".fa-shuffle");
 const rangeMusic = $("#music-range");
 const musicCurrentTime = $("#music-duration");
 const musicCurrentTimeEnd = $("#music-duration-end");
 
-  function getSongJson() {
-    const songs = new XMLHttpRequest();
-    songs.open("GET", "./assets/json/songs.json");
-    songs.send();
+function getSongJson() {
+  const songs = new XMLHttpRequest();
+  songs.open("GET", "./assets/json/songs.json");
+  songs.send();
 
-    songs.onload = function() {
-      if (songs.status === 200) {
-        const response = JSON.parse(songs.responseText);
-        app.songs = response;
-        app.start();
-      } else {
-        console.error("Failed to load songs.json");
-      }
-    };
+  songs.onload = function () {
+    if (songs.status === 200) {
+      const response = JSON.parse(songs.responseText);
+      app.songs = response;
+      app.start();
+    } else {
+      console.error("Failed to load songs.json");
+    }
   };
+}
 
 const app = {
   songs: {},
   currentIndex: 5,
   isPlaying: false,
   isRepeat: false,
+  isShuffle: false,
 
   loadSong: () => {
     imgAudio.src = app.songs[app.currentIndex].image;
@@ -49,6 +51,9 @@ const app = {
     };
 
     nextBtn.onclick = () => {
+      if (app.isShuffle) {
+        app.shuffleSong();
+      }
       app.currentIndex++;
       if (app.currentIndex > app.songs.length - 1) {
         app.currentIndex = 0;
@@ -58,6 +63,9 @@ const app = {
     };
 
     prevBtn.onclick = () => {
+      if (app.isShuffle) {
+        app.shuffleSong();
+      }
       app.currentIndex--;
       if (app.currentIndex < 0) {
         app.currentIndex = app.songs.length - 1;
@@ -80,10 +88,21 @@ const app = {
       }
     };
 
-    audio.onplay = () => {
-      app.isPlaying = true;
-      playBtn.classList.replace("fa-play", "fa-pause");
-    };
+    (shuffleBtn.onclick = () => {
+      if (!app.isShuffle) {
+        app.isShuffle = true;
+        shuffleBtn.style.color = "var(--green-color)";
+        show("Đã bật trộn bài hát");
+      } else {
+        app.isShuffle = false;
+        shuffleBtn.style.color = "var(--white-color)";
+        show("Đã tắt trộn bài hát");
+      }
+    }),
+      (audio.onplay = () => {
+        app.isPlaying = true;
+        playBtn.classList.replace("fa-play", "fa-pause");
+      });
 
     audio.onpause = () => {
       app.isPlaying = false;
@@ -126,6 +145,14 @@ const app = {
       audio.currentTime = seekTime;
       audio.play();
     };
+  },
+
+  shuffleSong: () => {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * app.songs.length);
+    } while (newIndex === app.currentIndex);
+    app.currentIndex = newIndex;
   },
 
   testing: () => {
