@@ -37,10 +37,10 @@ const app = {
   isShuffle: false,
 
   loadSong: () => {
-    imgAudio.src = app.songs[app.currentIndex].image;
     songName.textContent = app.songs[app.currentIndex].name;
     singerName.textContent = app.songs[app.currentIndex].singer;
     audio.src = app.songs[app.currentIndex].path;
+    imgAudio.src = app.songs[app.currentIndex].image;
 
     playBtn.onclick = () => {
       if (app.isPlaying) {
@@ -167,4 +167,7 @@ const app = {
 };
 
 getSongJson();
-app.start();
+document.onload = () => {
+  app.start();
+}
+

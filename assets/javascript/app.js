@@ -1,15 +1,23 @@
 const userIcon = document.querySelector(".hyper-link-item:last-child");
 const userMenu = document.querySelector(".user-menu");
+const volumeBtn = document.querySelector(".fa-volume-high");
+const rangVolume = document.querySelector("#volume");
 
-userIcon.addEventListener("click", () => {
-  userMenu.classList.toggle("hidden");
+function clickShow(btn, show) {
+  btn.addEventListener("click", () => {
+    show.classList.toggle("hidden");
 
-  document.addEventListener("click", (e) => {
-    if (!userMenu.contains(e.target) && !userIcon.contains(e.target)) {
-      userMenu.classList.add("hidden");
-    }
+    document.addEventListener("click", (e) => {
+      if (!show.contains(e.target) && !btn.contains(e.target)) {
+        show.classList.add("hidden");
+      }
+    });
   });
-});
+}
+
+clickShow(volumeBtn, rangVolume);
+clickShow(userIcon, userMenu);
+
 
 // Chữ Chạy
 const typedEffect = new Typed("#multiText", {
@@ -83,6 +91,3 @@ function show(text) {
     onClick: function () {}, // Callback after click
   }).showToast();
 }
-
-
-load();

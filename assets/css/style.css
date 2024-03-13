@@ -160,13 +160,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 4px;
 }
 
-/******** Firefox ********/
-input[type="range"]::-moz-range-track {
-  background: var(--hover-color);
-  height: 6px;
-  border-radius: 4px;
-}
-
 /***** Thumb Styles *****/
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
 input[type="range"]::-webkit-slider-thumb {
@@ -615,6 +608,34 @@ aside {
   cursor: pointer;
 }
 
+
+#volume::-webkit-slider-runnable-track {
+  background: var(--hover-color);
+  border-radius: 4px;
+}
+
+#volume {
+  position: absolute;
+  top: -55px;
+  right: 5px;
+  width: 140px;
+  transform: rotate(-90deg);
+  background-color: #fff;
+}
+
+#volume::after {
+  content: '';
+  position: absolute;
+  top: -79px;
+  left: 50px;
+  width: 40px;
+  height: 160px;
+  border-radius: 6px;
+  background-color: var(--bg-color);
+  transform: inherit;
+  z-index: -1;
+}
+
 .song-option {
   width: 25vw;
   display: flex;
@@ -897,4 +918,5 @@ aside {
   .main-item {
     flex-basis: calc(50% - 20px);
   }
+
 }
