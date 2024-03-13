@@ -91,3 +91,8 @@ function show(text) {
     onClick: function () {}, // Callback after click
   }).showToast();
 }
+
+
+window.onload = () => { 
+  document.querySelector(".load-container").style.display = "none";
+};
