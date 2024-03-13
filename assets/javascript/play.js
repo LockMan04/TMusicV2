@@ -7,6 +7,7 @@ const singerName = $(".name-singer");
 const playBtn = $(".fa-play");
 const nextBtn = $(".fa-forward-step");
 const prevBtn = $(".fa-backward-step");
+const repeatBtn = $(".fa-repeat");
 const rangeMusic = $("#music-range");
 const musicCurrentTime = $("#music-duration");
 const musicCurrentTimeEnd = $("#music-duration-end");
@@ -93,16 +94,11 @@ songs = [
   },
 ];
 
-// console.table(songs[0].image);
-
 const app = {
   songs: songs,
-  currentIndex: 3,
+  currentIndex: 5,
   isPlaying: false,
-
-  getCurrentIndex: () => {
-    return app.currentIndex;
-  },
+  isRepeat: false,
 
   loadSong: () => {
     imgAudio.src = app.songs[app.currentIndex].image;
@@ -125,25 +121,39 @@ const app = {
       }
       app.loadSong();
       audio.play();
-    },
+    };
 
     prevBtn.onclick = () => {
-        app.currentIndex--;
-        if (app.currentIndex < 0) {
-            app.currentIndex = app.songs.length - 1;
-        }
-            app.loadSong();
-            audio.play();
-    },
+      app.currentIndex--;
+      if (app.currentIndex < 0) {
+        app.currentIndex = app.songs.length - 1;
+      }
+      app.loadSong();
+      audio.play();
+    };
+
+    repeatBtn.onclick = () => {
+      if (!app.isRepeat) {
+        app.isRepeat = true;
+        repeatBtn.style.color = "var(--green-color)";
+        audio.loop = true;
+        show('Đang lặp lại bài hát này');
+      } else {
+        app.isRepeat = false;
+        audio.loop = false;
+        repeatBtn.style.color = "var(--white-color)";
+        show('Đã tắt lặp lại');
+      }
+    };
 
     audio.onplay = () => {
-        app.isPlaying = true;
-        playBtn.classList.replace("fa-play", "fa-pause");
+      app.isPlaying = true;
+      playBtn.classList.replace("fa-play", "fa-pause");
     };
 
     audio.onpause = () => {
-        app.isPlaying = false;
-        playBtn.classList.replace("fa-pause", "fa-play");
+      app.isPlaying = false;
+      playBtn.classList.replace("fa-pause", "fa-play");
     };
 
     audio.ontimeupdate = () => {
@@ -163,8 +173,8 @@ const app = {
       if (audio.ended) {
         app.currentIndex++;
         if (app.currentIndex > app.songs.length - 1) {
-        app.currentIndex = 0;
-      }
+          app.currentIndex = 0;
+        }
         app.loadSong();
         audio.play();
       }
@@ -184,9 +194,16 @@ const app = {
     };
   },
 
+  testing: () => {
+    localStorage.setItem("audioDuration", audio.duration);
+    // console.log(localStorage.getItem('audioDuration'));
+  },
+
   start: () => {
     app.loadSong();
+    app.testing();
   },
 };
 
 app.start();
+

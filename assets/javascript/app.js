@@ -63,3 +63,33 @@ list.forEach((list) => {
     list.scrollLeft = scrollLeft - walk;
   });
 });
+
+function show(text) {
+  Toastify({
+    text: text,
+    duration: 2000,
+    gravity: "top",
+    position: "right",
+    offset: {
+      x: 10,
+      y: 40,
+    },
+    style: {
+      background: "var(--green-color)",
+      color: "var(--black-color)",
+      borderRadius: "6px",
+      textWrap: "nowrap",
+    },
+    onClick: function () {}, // Callback after click
+  }).showToast();
+}
+
+function load() {
+  const songs = new XMLHttpRequest();
+  songs.onload = () => {
+    console.table(songs);
+  };
+
+  songs.open("GET", "./assets/javascript/songs.json");
+  songs.send();
+}
