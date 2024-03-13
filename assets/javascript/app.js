@@ -84,3 +84,5 @@ function show(text) {
   }).showToast();
 }
 
+
+load();
