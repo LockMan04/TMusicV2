@@ -65,8 +65,7 @@
         >
         <span id="search" data-title="Tìm kiếm"
           ><i class="fa-solid fa-magnifying-glass"></i
-          ><span class="home-search-content">Tìm kiếm</span></span
-        >
+          ><span class="home-search-content">Tìm kiếm</span></span>
       </div>
       <div class="library">
         <div class="library-item">
@@ -189,7 +188,7 @@
           <li class="song-control-item">
             <i class="fa-solid fa-backward-step"></i>
           </li>
-          <li class="song-control-item"><i class="fa-solid fa-play"></i></li>
+          <li class="song-control-item"><i class="fa-solid fa-play playButton"></i></li>
 
           <audio id="audio-player" src=""></audio>
 
@@ -225,7 +224,6 @@
           <li class="song-option-item">
             <i class="fa-solid fa-volume-high"></i>
           </li>
-          <li class="song-option-item">
             <input
               type="range"
               class="range-item hidden"
@@ -235,11 +233,32 @@
               min="0"
               value="50"
             />
-          </li>
           <li class="song-option-item">
             <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
           </li>
         </ul>
+      </div>
+      <ul class="mobile-control">
+        <li class="mobile-control-item"><i class="fa-solid fa-mobile-screen"></i></li>
+        <li class="mobile-control-item"><i class="fa-solid fa-circle-plus"></i></li>
+        <li class="mobile-control-item"><i class="fa-solid fa-play playButton"></i></li>
+      </ul>
+
+    </div>
+
+    <!-- Mobile -->
+    <div class="menu-mobile">
+      <div class="menu-mobile-item text-ative">
+        <i class="fa-solid fa-house"></i>
+        <span>Trang chủ</span>
+      </div>
+      <div class="menu-mobile-item">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Tìm kiếm</span>
+      </div>
+      <div class="menu-mobile-item">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Thư viện</span>
       </div>
     </div>
 

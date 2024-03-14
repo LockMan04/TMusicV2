@@ -1,11 +1,17 @@
-# TMuic
+# TMusic
 
 Music is a spotify-based website template with some basic music streaming functionality
 
 ## Demo
 [Click here to view demo](https://lockman04.github.io/TMusicV2/)
-### Or
-![Screen main](https://github.com/LockMan04/Stored/blob/main/TMusicV2/main.png)
+## Image
+
+#### Dektop
+![Screen desktop](https://github.com/LockMan04/Stored/blob/main/TMusicV2/main.png)
+#### Tablet
+![Screen tablet](https://github.com/LockMan04/Stored/blob/main/TMusicV2/desktop.png)
+#### Mobile
+![Screen mobile](https://github.com/LockMan04/Stored/blob/main/TMusicV2/mobile.png)
 
 ## Feature
 

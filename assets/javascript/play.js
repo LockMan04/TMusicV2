@@ -4,7 +4,7 @@ const audio = $("#audio-player");
 const imgAudio = $(".song-playing-img img");
 const songName = $(".song-playing-title-namesong");
 const singerName = $(".name-singer");
-const playBtn = $(".fa-play");
+const playBtn = $$(".playButton");
 const nextBtn = $(".fa-forward-step");
 const prevBtn = $(".fa-backward-step");
 const repeatBtn = $(".fa-repeat");
@@ -42,12 +42,28 @@ const app = {
     audio.src = app.songs[app.currentIndex].path;
     imgAudio.src = app.songs[app.currentIndex].image;
 
-    playBtn.onclick = () => {
-      if (app.isPlaying) {
-        audio.pause();
-      } else {
-        audio.play();
-      }
+    playBtn.forEach((play) => {
+      play.onclick = () => {
+        if (app.isPlaying) {
+          audio.pause();
+        } else {
+          audio.play();
+        }
+      };
+    });
+
+    audio.onplay = () => {
+      app.isPlaying = true;
+      playBtn.forEach((play) => {
+        play.classList.replace("fa-play", "fa-pause");
+      });
+    };
+    
+    audio.onpause = () => {
+      app.isPlaying = false;
+      playBtn.forEach((play) => {
+        play.classList.replace("fa-pause", "fa-play");
+      });
     };
 
     nextBtn.onclick = () => {
@@ -88,7 +104,7 @@ const app = {
       }
     };
 
-    (shuffleBtn.onclick = () => {
+    shuffleBtn.onclick = () => {
       if (!app.isShuffle) {
         app.isShuffle = true;
         shuffleBtn.style.color = "var(--green-color)";
@@ -98,15 +114,6 @@ const app = {
         shuffleBtn.style.color = "var(--white-color)";
         show("Đã tắt trộn bài hát");
       }
-    }),
-      (audio.onplay = () => {
-        app.isPlaying = true;
-        playBtn.classList.replace("fa-play", "fa-pause");
-      });
-
-    audio.onpause = () => {
-      app.isPlaying = false;
-      playBtn.classList.replace("fa-pause", "fa-play");
     };
 
     audio.ontimeupdate = () => {
@@ -165,4 +172,3 @@ const app = {
     app.testing();
   },
 };
-

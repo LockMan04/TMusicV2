@@ -514,8 +514,9 @@ aside {
   display: flex;
   flex-direction: row;
   height: 70px;
-  width: 25vw;
+  gap: 20px;
   align-items: center;
+  width: 30vw;
 }
 
 .song-playing-img {
@@ -539,7 +540,7 @@ aside {
   position: relative;
   line-height: 1.7;
   color: var(--white-color);
-  left: 22px;
+  /* left: 22px; */
   cursor: pointer;
   text-wrap: nowrap;
 }
@@ -618,7 +619,7 @@ aside {
   position: absolute;
   top: -55px;
   right: 5px;
-  width: 140px;
+  width: 130px;
   transform: rotate(-90deg);
   background-color: #fff;
 }
@@ -687,14 +688,14 @@ aside {
 }
 
 .main-item {
-  flex-basis: calc(33.33% - 20px);
+  flex-basis: calc(33.33% - 10px);
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
   height: 45px;
-  min-width: 320px;
+  min-width: 150px;
   background-color: var(--item-color);
   border-radius: 2px;
   cursor: pointer;
@@ -856,6 +857,44 @@ aside {
   padding: 5px;
 }
 
+
+
+
+
+.menu-mobile {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--black-color);
+  z-index: 999;
+  display: none;
+}
+
+.menu-mobile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-mobile-item i {
+  font-size: 24px;
+}
+
+.menu-mobile-item span {
+  font-size: 10px;
+  color: var(--text-nonAtive);
+  text-shadow: unset !important;
+}
+
+.mobile-control {
+  display: none;
+}
+
 /* Mobile */
 @media only screen and (max-width: 768px) {
   header,
@@ -863,14 +902,16 @@ aside {
     width: 100% !important;
   }
 
-  .setting {
+  .setting{
     display: block !important;
   }
 
   .home-search,
   .library,
   .hyper-link,
-  .library-playlist {
+  .library-playlist,
+  .song-option-item,
+  .song-control-item  {
     display: none !important;
   }
 
@@ -878,9 +919,80 @@ aside {
     font-size: 28px;
   }
 
-  .main-item {
-    flex-basis: calc(100% - 20px) !important;
+  .player-control {
+    bottom: 70px;
+    background-color: var(--item-color);
+    width: calc(100vw - 20px);
+    height: 60px;
+    margin-left: 10px;
+    border-radius: 8px;
+    display: block;
   }
+
+  .song-playing-item {
+    display: flex;
+    gap: 20px;
+  }
+
+  .song-playing-img img {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    inset: 8px 0 0 8px;
+  }
+
+  .song-playing-title-namesong {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } 
+
+  #music-range {
+    position: absolute;
+    max-width: unset;
+    width: calc(100vw - 30px);
+    top: -12px;
+    left: -47%;
+  }
+
+  #music-duration, #music-duration-end {
+    display: none !important;
+  }
+
+  .song-option-item:nth-child(3) {
+    position: absolute;
+    font-size: 18px;
+    right: 50px;
+  }
+
+
+  .menu-mobile {
+    display: flex !important;
+  }
+
+  #music-range::-webkit-slider-thumb {
+    height: unset !important;
+    width: unset !important;
+  }
+
+  .mobile-control {
+    position: relative;
+    top: -55px;
+    float: right;
+    right: 10px;
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+    gap: 15px;
+    cursor: pointer;
+  }
+
+
+
 }
 
 /* Tablet */
@@ -889,7 +1001,8 @@ aside {
   .library-item span,
   .library-filter,
   .library-search,
-  .library-playlist-title {
+  .library-playlist-title,
+  .moblie-control {
     display: none !important;
   }
 
@@ -916,7 +1029,7 @@ aside {
   }
 
   .main-item {
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(50% - 10px);
   }
 
 }
