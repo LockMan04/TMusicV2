@@ -164,7 +164,6 @@ const app = {
 
   testing: () => {
     localStorage.setItem("audioDuration", audio.duration);
-    // console.log(localStorage.getItem('audioDuration'));
   },
 
   start: () => {

@@ -70,6 +70,21 @@ list.forEach((list) => {
     const walk = x - startX; // Multiplier để tăng tốc độ kéo
     list.scrollLeft = scrollLeft - walk;
   });
+
+  list.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    startX = e.touches[0].pageX - list.offsetLeft;
+    scrollLeft = list.scrollLeft;
+  });
+
+  list.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - list.offsetLeft;
+    const walk = x - startX; // Multiplier để tăng tốc độ kéo
+    list.scrollLeft = scrollLeft - walk;
+  });
+
 });
 
 function show(text) {

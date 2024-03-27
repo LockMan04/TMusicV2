@@ -17,12 +17,18 @@
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE/Edge */
+  -webkit-tap-highlight-color: transparent;
   user-select: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: var(--white-text);
+}
+
+*:focus {
+  background-color: transparent;
+  outline: none;
 }
 
 body {
@@ -857,10 +863,6 @@ aside {
   padding: 5px;
 }
 
-
-
-
-
 .menu-mobile {
   position: fixed;
   bottom: 0;
@@ -969,7 +971,6 @@ aside {
     right: 50px;
   }
 
-
   .menu-mobile {
     display: flex !important;
   }
@@ -990,9 +991,6 @@ aside {
     gap: 15px;
     cursor: pointer;
   }
-
-
-
 }
 
 /* Tablet */
@@ -1031,9 +1029,7 @@ aside {
   .main-item {
     flex-basis: calc(50% - 10px);
   }
-
 }
-
 
 /* Loading */
 .load-container {
