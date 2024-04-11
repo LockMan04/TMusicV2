@@ -12,6 +12,7 @@ const shuffleBtn = $(".fa-shuffle");
 const rangeMusic = $("#music-range");
 const musicCurrentTime = $("#music-duration");
 const musicCurrentTimeEnd = $("#music-duration-end");
+const volumeRange = $("#volume");
 
 function getSongJson() {
   const songs = new XMLHttpRequest();
@@ -152,6 +153,14 @@ const app = {
       audio.currentTime = seekTime;
       audio.play();
     };
+
+    volumeRange.oninput = (e) => {
+      audio.volume = e.target.value / 100;
+    };
+
+    audio.onvolumechange = () => {
+      volumeRange.value = audio.volume * 100;
+    }; 
   },
 
   shuffleSong: () => {

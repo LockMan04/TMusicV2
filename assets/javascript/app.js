@@ -112,9 +112,3 @@ window.onload = () => {
   document.querySelector(".load-container").style.display = "none";
   app.start();
 };
-
-// const play4 = document.querySelector(".fa-play, .playButton");
-
-// play4.addEventListener("click", () => {
-//   play4.classList.replace("fa-play", "fa-pause");
-// });

@@ -523,6 +523,7 @@ aside {
   gap: 20px;
   align-items: center;
   width: 30vw;
+
 }
 
 .song-playing-img {
@@ -546,9 +547,9 @@ aside {
   position: relative;
   line-height: 1.7;
   color: var(--white-color);
-  /* left: 22px; */
   cursor: pointer;
   text-wrap: nowrap;
+  width: 100%;
 }
 
 .song-playing-title-namesinger span {
@@ -934,6 +935,7 @@ aside {
   .song-playing-item {
     display: flex;
     gap: 20px;
+    padding-left: 30px;
   }
 
   .song-playing-img img {
