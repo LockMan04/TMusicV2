@@ -2,6 +2,7 @@ const userIcon = document.querySelector(".hyper-link-item:last-child");
 const userMenu = document.querySelector(".user-menu");
 const volumeBtn = document.querySelector(".fa-volume-high");
 const rangVolume = document.querySelector("#volume");
+const hiddenPassword = document.querySelector(".fa-eye-slash");
 
 function clickShow(btn, show) {
   btn.addEventListener("click", () => {
@@ -112,3 +113,4 @@ window.onload = () => {
   document.querySelector(".load-container").style.display = "none";
   app.start();
 };
+

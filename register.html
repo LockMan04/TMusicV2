@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="login-logo">
+      <img src="assets/img/logo.png" alt="logo" />
+      <span>TMusic</span>
+    </div>
+
+    <div class="login-container">
+      <form action="#" class="login-form">
+        <h2>Chào mừng bạn đến với TMusic</h2>
+
+        <hr />
+
+        <div class="first-input">
+          <label for="userEmail">
+            <span>Email</span>
+            <input
+              type="text"
+              name="userEmail"
+              id="userEmail"
+              placeholder="example@domain.com"
+              autofocus
+            />
+          </label>
+          <label for="userPassword">
+            <span>Mật khẩu</span>
+            <input
+              type="password"
+              name="userPassword"
+              id="userPassword"
+              placeholder="Mật khẩu"
+            />
+            <i class="fa-regular fa-eye-slash"></i>
+          </label>
+        <button type="button" onclick="nextStepRegister()">Tiếp theo</button>
+
+        </div>
+
+        <div class="second-input" style="display: none;">
+          <span>Ảnh đại diện</span>
+          <label for="userImage" id="imagePreview">
+            <span class="input-avata"></span>
+            <img src="#" id="selectedImage" />
+            <input
+              type="file"
+              name="userImage"
+              id="userImage"
+              accept="image/png, image/jpeg, image/jpg, image/webp"
+              onchange="previewImage(this)"
+            />
+          </label>
+
+          <label for="userName">
+            <span>Tên người dùng</span>
+            <input
+              type="text"
+              name="userName"
+              id="userName"
+              placeholder="Tên người dùng"
+              autofocus
+            />
+          </label>
+        <button type="submit">Hoàn thành</button>
+
+        </div>
+
+        <hr />
+
+        <p class="create-new-account">
+          Bạn đã có tài khoản?
+          <a href="#" class="hover-color">Đăng nhâp ngay</a>
+        </p>
+      </form>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/ef0d708eb7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/javascript/register.js"></script>
+  </body>
+</html>

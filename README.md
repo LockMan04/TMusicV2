@@ -25,6 +25,8 @@ Music is a spotify-based website template with some basic music streaming functi
 
 > This is a static website template. So it only has 10 songs available
 
+- 13/04/2024: Update Login and register page
+
 ## The website is still under development
 
 ## Thanks
