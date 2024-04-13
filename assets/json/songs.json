@@ -4,87 +4,87 @@
     "name": "nếu lúc đó",
     "type": "Bài hát",
     "singer": "tlinh, 2pillz",
-    "path": "./assets/music/songs/NeuLucDo-tlinh2pillz-8783613.mp3",
-    "image": "./assets/music/img-songs/neulucdo.jpg"
+    "path": "./assets/music/songs/neu-luc-do.mp3",
+    "image": "./assets/music/img-songs/neu-luc-do.jpg"
   },
   {
     "id": "2",
     "name": "Anh Nhớ Ra",
     "type": "Bài hát",
     "singer": "Vũ ft.Trang",
-    "path": "./assets/music/songs/Anh Nhớ Ra (feat. TRANG) - Vũ..mp3",
-    "image": "./assets/music/img-songs/Anh Nhớ Ra (feat. TRANG) - Vũ..jpg"
+    "path": "./assets/music/songs/anh-nho-ra.mp3",
+    "image": "./assets/music/img-songs/anh-nho-ra.jpg"
   },
   {
     "id": "3",
     "name": "Anh Đã Ổn Hơn",
     "type": "Bài hát",
     "singer": "MKC",
-    "path": "./assets/music/songs/AnhDaOnHon-MCK-8804113.mp3",
-    "image": "./assets/music/img-songs/anh da on hon.jpg"
+    "path": "./assets/music/songs/anh-da-on-hon.mp3",
+    "image": "./assets/music/img-songs/anh-da-on-hon.jpg"
   },
   {
     "id": "4",
     "name": "Chìm Sâu",
     "type": "Bài hát",
     "singer": "RPT MKC",
-    "path": "./assets/music/songs/Chìm Sâu - RPT MCK.mp3",
-    "image": "./assets/music/img-songs/Chìm Sâu - RPT MCK.jpg"
+    "path": "./assets/music/songs/chim-sau.mp3",
+    "image": "./assets/music/img-songs/chim-sau.jpg"
   },
   {
     "id": "5",
     "name": "Chuyện Đôi Ta",
     "type": "Bài hát",
     "singer": "Emcee L(Da LAB), ft.Muộii",
-    "path": "./assets/music/songs/Chuyện Đôi Ta (feat. Muộii) - Emcee L (Da LAB).mp3",
-    "image": "./assets/music/img-songs/Chuyện Đôi Ta (feat. Muộii) - Emcee L (Da LAB).jpg"
+    "path": "./assets/music/songs/chuyem-doi-ta.mp3",
+    "image": "./assets/music/img-songs/chuyem-doi-ta.jpg"
   },
   {
     "id": "6",
     "name": "Ghệ Đẹp",
     "type": "Bài hát",
     "singer": "Cain",
-    "path": "./assets/music/songs/Ghệ Đẹp - Cain.mp3",
-    "image": "./assets/music/img-songs/Ghệ Đẹp - Cain.jpg"
+    "path": "./assets/music/songs/ghe-dep.mp3",
+    "image": "./assets/music/img-songs/ghe-dep.jpg"
   },
   {
     "id": "7",
     "name": "ghệ iu dấu của em ơi",
     "type": "Bài hát",
     "singer": "tlinh",
-    "path": "./assets/music/songs/ghệ iu dấu của em ơi - tlinh.mp3",
-    "image": "./assets/music/img-songs/ghệ iu dấu của em ơi - tlinh.jpg"
+    "path": "./assets/music/songs/ghe-yeu-dau-cua-em-oi.mp3",
+    "image": "./assets/music/img-songs/ghe-yeu-dau-cua-em-oi.jpg"
   },
   {
     "id": "8",
     "name": "Sinh Ra Đã Là Thứ Đối Lập Nhau",
     "type": "Bài hát",
     "singer": "Emcee L (Da LAB), ft.Badbies",
-    "path": "./assets/music/songs/Sinh Ra Đã Là Thứ Đối Lập Nhau (feat. Badbies) - Emcee L (Da LAB).mp3",
-    "image": "./assets/music/img-songs/Sinh Ra Đã Là Thứ Đối Lập Nhau (feat. Badbies) - Emcee L (Da LAB).jpg"
+    "path": "./assets/music/songs/sinh-ra-da-la-thu-doi-lap-nhau.mp3",
+    "image": "./assets/music/img-songs/sinh-ra-da-la-thu-doi-lap-nhau.jpg"
   },
   {
     "id": "9",
     "name": "Trước Khi Em Tồn Tại",
     "type": "Bài hát",
     "singer": "Thắng",
-    "path": "./assets/music/songs/Trước Khi Em Tồn Tại - Thắng.mp3",
-    "image": "./assets/music/img-songs/Trước Khi Em Tồn Tại - Thắng.jpg"
+    "path": "./assets/music/songs/truoc-khi-em-ton-tai.mp3",
+    "image": "./assets/music/img-songs/truoc-khi-em-ton-tai.jpg"
   },
   {
     "id": "10",
     "name": "Waitting For You",
     "type": "Bài hát",
     "singer": "MONO",
-    "path": "./assets/music/songs/Waiting For You - MONO.mp3",
-    "image": "./assets/music/img-songs/Waiting For You - MONO.jpg"
+    "path": "./assets/music/songs/waiting-for-you.mp3",
+    "image": "./assets/music/img-songs/waiting-for-you.jpg"
   },
   {
     "id": "11",
     "name": "She Said",
     "type": "Bài hát",
     "singer": "WEAN, NAOMI",
-    "path": "./assets/music/songs/She Said - WEAN, NAOMI - NhacHay360.mp3",
-    "image": "./assets/music/img-songs/she said.jpg"
+    "path": "./assets/music/songs/she-said.mp3",
+    "image": "./assets/music/img-songs/she-said.jpg"
   }
 ]
